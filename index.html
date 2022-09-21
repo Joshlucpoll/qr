@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joshlucpoll QR</title>
+</head>
+
+<body>
+  <!-- <script src="index.js"></script> -->
+  <!-- <div id="btn" onclick="play()">▶</div> -->
+  <div>
+    <video class="video" id="v1">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v2">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v3">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v4">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v5">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v6">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v7">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v8">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v9">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v10">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v11">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+    <video class="video" id="v12">
+      <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+      Booo, your browser is bad
+    </video>
+  </div>
+
+  <script type="application/javascript">
+    function startPlay(el) {
+      el.play();
+    }
+
+    function play(e) {
+      console.log("yes");
+      // document.getElementById("btn").style.display = "none";
+      for (let i = 1; i <= 12; i++) {
+        setTimeout(() => {
+          startPlay(document.getElementById(`v${i}`));
+        }, 50 * i);
+      }
+    }
+
+    play(3)
+
+  </script>
+
+  <style>
+    :root {
+      --videosLine: 4;
+    }
+
+    body {
+      margin: 0;
+      background-color: black;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+
+    @media screen and (max-width: 1400px) {
+      :root {
+        --videosLine: 3;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      :root {
+        --videosLine: 2;
+      }
+    }
+
+    .video {
+      width: calc(100vw / var(--videosLine) - 3px);
+      object-fit: fill;
+      margin: 0;
+    }
+
+    #btn {
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0px;
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+</body>
+
+</html>
