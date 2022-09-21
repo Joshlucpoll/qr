@@ -9,8 +9,7 @@
 </head>
 
 <body>
-  <!-- <script src="index.js"></script> -->
-  <!-- <div id="btn" onclick="play()">▶</div> -->
+  <div id="btn" onclick="play()">▶</div>
   <div>
     <video class="video" id="v1">
       <source src="assets/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
@@ -69,7 +68,7 @@
 
     function play(e) {
       console.log("yes");
-      // document.getElementById("btn").style.display = "none";
+      document.getElementById("btn").style.display = "none";
       for (let i = 1; i <= 12; i++) {
         setTimeout(() => {
           startPlay(document.getElementById(`v${i}`));
@@ -77,7 +76,7 @@
       }
     }
 
-    play(3)
+    // play(3)
 
   </script>
 
